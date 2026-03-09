@@ -1,0 +1,487 @@
+Below is your ULTIMATE V1 REPLIT MASTER BUILD PROMPT for AROHA.
+
+This is structured for:
+•⁠  ⁠Clean implementation
+•⁠  ⁠Clear folder structure
+•⁠  ⁠Real feature simulation
+•⁠  ⁠Investor/demo-ready experience
+•⁠  ⁠Emotionally safe teen UX
+
+You can paste this directly into Replit AI.
+
+⸻
+
+🧠 AROHA V1 — FULL PRODUCTION-READY PROTOTYPE BUILD PROMPT
+
+Build a mobile-first, responsive web application called:
+
+🌊 AROHA — Mental Health Companion
+
+This is Version 1.
+
+The experience must feel:
+	•	Calm
+	•	Emotionally safe
+	•	Non-clinical
+	•	Soft-gamified
+	•	Private
+	•	Supportive
+	•	Minimal but warm
+
+This is NOT a hospital app.
+It is a daily emotional companion.
+
+⸻
+
+🏗 TECH STACK
+
+Use:
+	•	Next.js (App Router)
+	•	Tailwind CSS
+	•	LocalStorage for persistence
+	•	Functional components
+	•	Component-based architecture
+
+No backend required.
+No external APIs except Google OAuth for login.
+
+⸻
+
+📁 STRUCTURED FILE ARCHITECTURE
+
+Create the following folder structure:
+
+/app
+  /login
+  /onboarding
+  /home
+  /untangle
+  /diagnostic
+  /tracking
+  /mindkit
+  /sos
+  /professional-help
+/components
+  Logo.tsx
+  BottomNav.tsx
+  SOSButton.tsx
+  Card.tsx
+  ActivityCard.tsx
+  ProgressBar.tsx
+  TrackerInput.tsx
+  InsightCard.tsx
+  JournalEntry.tsx
+  BreathingAnimation.tsx
+  MoodSelector.tsx
+  ConcernChips.tsx
+  GlowContainer.tsx
+/lib
+  hamiltonScale.ts
+  concernEngine.ts
+  taskEngine.ts
+  trackerLogic.ts
+/styles
+  globals.css
+
+All pages must include:
+
+•⁠  ⁠Logo (top center, visually aligned)
+•⁠  ⁠Floating Global SOS Button (bottom right, fixed)
+•⁠  ⁠Bottom Navigation
+
+⸻
+
+🎨 DESIGN SYSTEM
+
+Colors
+
+Primary → #38BDF8
+Accent → #A78BFA
+Success → #10B981
+Warning → #F59E0B
+Critical → #EF4444
+
+Background Light → #F8FAFC
+Dark Mode → #0F172A
+
+Blend UI tones to match the uploaded Aroha logo:
+	•	Use primary blue for highlights
+	•	Subtle purple glow gradients
+	•	Keep warmth soft and diffused
+
+⸻
+
+Typography
+
+Headings → Poppins
+Body → Inter
+
+⸻
+
+Style Rules
+	•	Rounded corners: 1.5rem
+	•	Soft shadows
+	•	Subtle blue-purple glow
+	•	Card-based UI
+	•	Spacious padding
+	•	Minimal outline icons
+	•	No emojis in navigation
+	•	Clean bottom navigation
+	•	Large tap targets
+
+⸻
+
+🔐 LOGIN FLOW
+
+1️⃣ Opening Screen
+
+6-second breathing animation:
+Inhale → expand circle
+Exhale → shrink circle
+Soft glowing gradient
+
+Text:
+“Welcome to Aroha”
+“Take a breath with us”
+
+⸻
+
+2️⃣ Mood Scale Evaluation
+
+Minimal slider:
+“How are you feeling right now?”
+
+⸻
+
+3️⃣ Google Login Authentication
+
+Use mock authentication if needed.
+
+⸻
+
+4️⃣ General Details
+
+Fields:
+	•	Name
+	•	Age
+	•	Gender
+
+⸻
+
+5️⃣ Location Details
+	•	State
+	•	District
+
+Store for SOS + hospital filtering.
+
+⸻
+
+6️⃣ Concern Prompt
+
+Square grid layout.
+Concern chips based on Problem Matrix:
+	•	Anxiety / Overthinking
+	•	Emotional Numbness
+	•	Fear of Failure
+	•	Low Self Esteem
+	•	Peer Pressure
+	•	Relationship Issues
+	•	Academic Burnout
+	•	Loneliness
+	•	Mood Swings
+
+After selecting → suggest Diagnostic Testing.
+
+⸻
+
+🧪 DIAGNOSTIC PAGE
+
+Implement Hamilton Anxiety Rating Scale (HAM-A)
+
+14 items
+Scale: 0–4
+
+Auto calculate:
+
+Total score range: 0–56
+
+Interpretation:
+<17 → Mild
+18–24 → Mild-Moderate
+25–30 → Moderate-Severe
+
+30 → High
+
+Display:
+
+Insight cards:
+	•	Anxiety Level
+	•	Somatic vs Psychic split
+	•	Quick suggestion
+
+Also include:
+
+⚡ Quick Evaluation Button
+(Short 4-question rapid check version)
+
+Non-clinical language.
+Never label the user.
+Use phrases like:
+
+“Your nervous system seems under strain.”
+“You may benefit from grounding tools.”
+
+⸻
+
+🌊 HOME PAGE
+
+Sections:
+
+🌟 Recommended for You Today
+(top-ranked task based on concern + diagnostic)
+
+🧰 More Tools for This Feeling
+(remaining 4 tasks)
+
+Activity Card includes:
+	•	Name
+	•	1-line purpose
+	•	Time required
+	•	Start button
+
+⸻
+
+🎮 INTERACTIVE ACTIVITY FLOW
+
+Full-screen experience.
+
+Top:
+Step X of Y
+Progress bar
+
+Step Types:
+	•	Reflection input
+	•	Guided breathing animation
+	•	Choice selection
+	•	Visualization
+	•	Journaling
+
+Completion Screen:
+“You showed up for yourself”
+Gentle glow animation
+Streak increase
+Save to MindKit button
+
+All activities must be:
+Self-led
+Research-backed (CBT / DBT / Mindfulness)
+Emotion-focused
+Non-triggering
+
+⸻
+
+🌿 UNTANGLE PAGE
+
+Core Engine:
+
+1️⃣ Emotion Selector
+2️⃣ Concern Chips
+3️⃣ Therapeutic Task Engine
+
+For each concern:
+Rank top 5 tasks.
+
+Example:
+Anxiety →
+	1.	3 Facts + 1 Fear
+	2.	Mind Dump
+	3.	Box Breathing
+	4.	Worry Time
+	5.	5-4-3-2-1
+
+Use internal logic file:
+concernEngine.ts
+
+Include:
+
+Mini Journal
+Mood Music placeholder
+Vision Board builder (simple image + text collage builder)
+
+⸻
+
+📊 TRACKING PAGE
+
+Trackers:
+	1.	Water
+	2.	Sleep
+	3.	Menstrual (only if gender = female)
+	4.	Screen Time (simulate permission request)
+	5.	BMI calculator
+	6.	To-do list
+
+Swipe between trackers.
+Each tracker shows:
+
+History graph
+Trend insight
+Encouraging analysis
+
+Example:
+“You sleep better on days you reduce screen time.”
+
+⸻
+
+🌿 MINDKIT PAGE
+
+Title:
+Your MindKit
+Tools that help you come back to yourself
+
+Sections:
+
+Saved Activities
+Private Journal (🔒)
+Personal Growth Snapshot
+
+Include empty states:
+“No activities saved yet”
+“No journal entries yet”
+
+⸻
+
+🆘 GLOBAL SOS BUTTON
+
+Floating on every page.
+
+When clicked → SOS Page:
+
+Top line:
+“You don’t have to handle this alone”
+
+Immediate Actions:
+	•	Call Ambulance
+	•	Call Helpline
+	•	Nearest Hospital (district filtered)
+
+Below:
+Start Breathing Exercise
+Grounding Tool
+
+Soft red accent but not alarming.
+
+⸻
+
+🏥 PROFESSIONAL HELP PAGE
+
+Show:
+Nearest verified hospital (mock)
+Call button
+View Map placeholder
+
+Below:
+Curated youth mental health helplines
+
+⸻
+
+🎮 SOFT GAMIFICATION
+
+XP system
+Streak counter
+Growth progress bar
+
+No pressure language.
+No competitive tone.
+
+⸻
+
+🧠 MICROCOPY TONE
+
+Use supportive phrases like:
+
+“One small step is enough.”
+“This space is yours.”
+“You showed up for yourself.”
+
+Never use:
+Disorder labels
+Clinical warnings
+Fear-based language
+
+⸻
+
+🔥 DIFFERENTIATION
+
+This is NOT a symptom checker.
+
+It is:
+Emotion-first
+Concern-led
+Research-backed
+Teen-safe
+Private
+
+⸻
+
+🌙 DARK MODE
+
+Must support dark mode automatically.
+
+Deep navy background
+Soft glowing accents
+
+⸻
+
+🚨 CRITICAL REQUIREMENT
+
+Floating Global SOS Button must appear on:
+
+Home
+Untangle
+Diagnostic
+Tracking
+MindKit
+Professional Help
+
+Always visible.
+
+⸻
+
+🎯 FINAL OUTPUT REQUIREMENT
+
+App must:
+	•	Run smoothly
+	•	Feel emotionally warm
+	•	Be visually cohesive with Aroha logo
+	•	Be demo-ready
+	•	Work fully offline (except login)
+	•	Use reusable components
+
+⸻
+
+🧠 BUILD WITH INTENT
+
+This is not just UI.
+
+This is emotional infrastructure.
+
+Design for:
+A 15-year-old who is overwhelmed
+But afraid to ask for help
+
+Every screen must feel:
+
+Safe.
+Soft.
+Private.
+Human.
+
+⸻
+
+If you’d like next, I can generate:
+
+•⁠  ⁠The actual Hamilton scale logic file
+•⁠  ⁠The concernEngine logic mapping
+•⁠  ⁠Or the full UI component code structure ready to paste
+
+Just say the word.

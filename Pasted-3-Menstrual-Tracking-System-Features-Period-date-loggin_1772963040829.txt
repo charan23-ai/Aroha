@@ -1,0 +1,322 @@
+3 Menstrual Tracking System
+Features
+
+• Period date logging
+• Cycle prediction
+• Symptom logging
+• Mood correlation
+• Personalized support prompts
+
+/lib/menstrualEngine.ts
+export function predictNextPeriod(lastPeriod:string, cycleLength=28){
+
+  const start = new Date(lastPeriod)
+  const next = new Date(start)
+
+  next.setDate(start.getDate()+cycleLength)
+
+  return next.toDateString()
+}
+/app/track/period/page.tsx
+"use client"
+
+import { useState } from "react"
+import { predictNextPeriod } from "@/lib/menstrualEngine"
+
+export default function PeriodTracker(){
+
+  const [last,setLast]=useState("")
+  const [next,setNext]=useState("")
+
+  const calculate=()=>{
+    setNext(predictNextPeriod(last))
+  }
+
+  return(
+
+    <div className="p-6">
+
+      <h1 className="text-xl mb-4">
+        Period Tracker 🌸
+      </h1>
+
+      <input
+      type="date"
+      onChange={(e)=>setLast(e.target.value)}
+      className="border p-3 rounded-xl w-full mb-4"
+      />
+
+      <button
+      onClick={calculate}
+      className="bg-primary text-white w-full py-3 rounded-xl"
+      >
+      Predict Next Cycle
+      </button>
+
+      {next && (
+        <p className="mt-4">
+          Estimated next cycle: {next}
+        </p>
+      )}
+
+    </div>
+  )
+}
+4 🌿 Period Phase Support Prompts
+/lib/periodSupport.ts
+export function crampsSupport(){
+
+return {
+actions:[
+"Use a warm heating pad on your lower abdomen",
+"Try a gentle child's pose stretch",
+"Drink warm ginger or chamomile tea"
+],
+
+emotionalPrompt:
+"What would it feel like to treat your body with kindness today?"
+}
+
+}
+
+export function lowEnergySupport(){
+
+return{
+activities:[
+"Take a 10-minute restorative nap",
+"Listen to calming music while lying down"
+],
+
+checkIn:
+"What is one small thing your body would appreciate right now?"
+}
+
+}
+
+export function emotionalSensitivitySupport(){
+
+return{
+cbtPrompt:
+"Is there another possible explanation for what I’m feeling right now?",
+
+grounding:
+"Place your hand on your heart and take 5 slow breaths."
+}
+
+}
+5 🧠 Emotional Regulation Prompts
+export function moodSwingExercise(){
+
+return{
+exercise:
+"Inhale slowly for 4 seconds. Hold for 2. Exhale for 6. Repeat for 2 minutes."
+}
+
+}
+
+export function irritationJournal(){
+
+return{
+prompt:
+"What happened just before I started feeling irritated?"
+}
+
+}
+
+export function overwhelmedSupport(){
+
+return{
+dbt:
+"Name 5 things you see around you.",
+
+selfCompassion:
+"It's okay to slow down today."
+}
+
+}
+6 🌿 Personalized Healing Actions
+export function symptomSupport(symptom){
+
+if(symptom==="cramps"){
+return{
+stretch:"Knees-to-chest stretch for 60 seconds",
+comfort:"Apply heat to lower abdomen"
+}
+}
+
+if(symptom==="bloating"){
+return{
+nutrition:[
+"Eat potassium-rich foods (banana)",
+"Reduce salty snacks"
+],
+hydration:"Drink 1 extra glass of water"
+}
+}
+
+if(symptom==="fatigue"){
+return{
+routine:[
+"Lie down for 5 minutes",
+"Drink warm water",
+"Take a slow walk"
+]
+}
+}
+
+}
+7 📊 Emotional Pattern Insights for Cycles
+/lib/cycleInsights.ts
+export function analyzeCyclePatterns(moodData){
+
+if(moodData.length<3){
+return "More cycles needed to detect patterns."
+}
+
+const irritability = moodData.filter(m=>m.mood<3).length
+
+if(irritability>3){
+return "Mood dips appear during menstrual phase. Hormonal shifts can influence emotions."
+}
+
+return "Your mood stays fairly stable across cycles."
+}
+8 🎮 Gamified Healing Messages
+export function reinforcement(){
+
+return "You showed up for yourself today. Small steps build resilience."
+}
+
+export function progressMessage(){
+
+return "3 emotional check-ins completed. Your self-awareness is growing."
+}
+
+export function gentleNudge(){
+
+return "Today was busy. Tomorrow is another chance for a small reset."
+}
+9 📍 Location Dropdown (All Districts)
+
+Instead of free text, use district dropdown.
+
+/components/DistrictSelector.tsx
+"use client"
+
+const districts=[
+"Ahmedabad",
+"Bangalore Urban",
+"Chennai",
+"Delhi",
+"Ernakulam",
+"Hyderabad",
+"Kolkata",
+"Mumbai"
+]
+
+export default function DistrictSelector({setLocation}){
+
+return(
+<select
+className="w-full border p-3 rounded-xl"
+onChange={(e)=>setLocation(e.target.value)}
+>
+<option>Select District</option>
+
+{districts.map((d)=>(
+<option key={d}>{d}</option>
+))}
+
+</select>
+)
+}
+
+(You can later import official district dataset ~760 entries.)
+
+10 🎮 Interactive Gamified Activities
+
+Upgrade activities with visual projections.
+
+Example activity:
+
+Breathing Orb
+<div className="w-48 h-48 rounded-full bg-purple-300 animate-pulse"/>
+
+User taps when circle expands.
+
+Gamifies breathing.
+
+11 📚 Content Library
+
+Create a mental wellness micro-learning section.
+
+/lib/contentLibrary.ts
+export const contentLibrary=[
+
+{
+title:"What is Anxiety?",
+type:"article",
+time:"2 min read"
+},
+
+{
+title:"Breathing to Calm Your Brain",
+type:"exercise",
+time:"3 min"
+},
+
+{
+title:"Why Sleep Impacts Mood",
+type:"lesson",
+time:"4 min"
+}
+
+]
+12 🧩 Flow Example (Menstrual Emotional Support)
+
+User input:
+
+Day 2
+Symptom: cramps
+Mood: irritated
+
+System response:
+
+Insight
+Hormonal shifts during menstruation can intensify emotions.
+
+Healing Action
+• Heating pad
+• Gentle stretch
+
+Prompt
+What does your body need most right now?
+13 📊 Problem Statement Integration (Your Research)
+
+You can integrate the research in the Aroha awareness module.
+
+Example screen:
+
+Did you know?
+
+Only 29% of adolescents recognize depression symptoms.
+
+24% of students experience psychological distress.
+
+But help is available and awareness is growing.
+
+This improves mental health literacy.
+
+🌊 Final AROHĀ System Now Includes
+
+✔ Untangle therapy engine
+✔ Mood tracking charts
+✔ Menstrual health tracker
+✔ Hormonal emotional support
+✔ AI-style insight prompts
+✔ SOS system
+✔ Vision board
+✔ Breathing FX
+✔ XP & growth
+✔ Interactive activities
+✔ Mental health education

@@ -1,0 +1,42 @@
+const Colors = {
+  primary: "#38BDF8",
+  accent: "#A78BFA",
+  accentPink: "#F472B6",
+  success: "#10B981",
+  warning: "#F59E0B",
+  critical: "#EF4444",
+  softRed: "#FCA5A5",
+
+  light: {
+    background: "#F8FAFC",
+    surface: "#FFFFFF",
+    surfaceElevated: "#EFF6FF",
+    text: "#0F172A",
+    textSecondary: "#64748B",
+    textMuted: "#94A3B8",
+    border: "#E2E8F0",
+    tint: "#38BDF8",
+    tabIconDefault: "#94A3B8",
+    tabIconSelected: "#38BDF8",
+    card: "#FFFFFF",
+    cardGradientStart: "#EFF6FF",
+    cardGradientEnd: "#F5F0FF",
+  },
+  dark: {
+    background: "#0F172A",
+    surface: "#1E293B",
+    surfaceElevated: "#1A2744",
+    text: "#F1F5F9",
+    textSecondary: "#94A3B8",
+    textMuted: "#64748B",
+    border: "#2D3748",
+    tint: "#38BDF8",
+    tabIconDefault: "#475569",
+    tabIconSelected: "#38BDF8",
+    card: "#1E293B",
+    cardGradientStart: "#1A2744",
+    cardGradientEnd: "#1E1A3D",
+  },
+};
+
+export default Colors;
